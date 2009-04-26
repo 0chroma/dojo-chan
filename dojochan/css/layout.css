@@ -1,0 +1,67 @@
+html {
+    background: #eef2ff;
+}
+
+.toolbar {
+   background: #dde2ee;
+   border-bottom: 1px solid #cdd2de;
+   padding: 0.25em;
+}
+
+.toolbar .rightNav {
+    float: right;
+}
+
+#index {
+
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3em;
+}
+
+.chanBoardListTitle {
+    font-weight: bold;
+    font-size: 1.5em;
+    background: #dde2ee;
+}
+
+.chanBoardList {
+   border: 1px solid #cdd2de;
+   width: 41em;
+   margin: 1em auto;
+}
+
+.chanBoardList ul li {
+    float: left;
+    margin: 0 3em 1.5em 0;
+}
+
+.chanBoardList ul li ul {
+    padding-left: 1.5em;
+}
+
+.chanBoardList ul li ul li {
+    float: none;
+    margin: 0;
+}
+
+.chanBoardList div.bottom {
+    clear: both;
+}
+
+.boardGroupTitle {
+    font-weight: bold;
+}
+
+.boardTitle {
+    font-weight: normal;
+}
+
+#board.hidden, #index.hidden, #notfound.hidden {
+    display: none;
+}

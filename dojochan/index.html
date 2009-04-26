@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>DojoChan</title>
+  <link href="/dojo/dojo/resources/dojo.css" rel="stylesheet" type="text/css" />
+  <link href="/css/layout.css" rel="stylesheet" type="text/css" />
+  <link href="/css/elements.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="/dojo/dojo/dojo.js" djConfig="parseOnLoad: true"></script>
+  <script type="text/javascript">
+    dojo.require("chan.chan");
+  </script>
+</head>
+<body>
+<div class="toolbar">
+   <div class="rightNav">
+       [<a href="#/" onClick="chan.url.resolve('#/');">Home</a>]
+   </div>
+   <div dojoType="chan.widget.CompactBoardList"></div>
+</div>
+<div id="index">
+    <div class="header">
+        <h1>DojoChan</h1>
+    </div>
+    <div dojoType="chan.widget.BoardList"></div>
+</div>
+<div id="board" class="hidden"></div>
+<div id="notfound" class="hidden">
+    <div class="header">
+        <h1>404 - Not Found</h1>
+    </div>
+</div>
+</body>
+</html>

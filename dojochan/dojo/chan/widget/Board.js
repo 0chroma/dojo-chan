@@ -30,17 +30,17 @@ dojo.declare("chan.widget.Board", [dijit._Widget, dijit._Templated, dijit._Conta
     },
     page: function(num){
         this.destroyDescendants();
-        var store = this.stores.Board;
+        var store = this.stores.Thread;
         store.fetch({
-            query: {},
-            start: ((num-1)*10)+1,
-            count: 10,
+            query: {board: this.boardItem},
+            start: ((num-1)*10),
+            count: 9,
             onItem: dojo.hitch(this, "_addThread")
         })
     },
     _addThread: function(item){
         var store = this.stores.Thread;
-
-        console.log(store.getValue(item, "message"))
+        
+        console.log(item)
     }
 });

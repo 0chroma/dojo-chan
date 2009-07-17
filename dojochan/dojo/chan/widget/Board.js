@@ -40,6 +40,7 @@ dojo.declare("chan.widget.Board", [dijit._Widget, dijit._Templated, dijit._Conta
     },
     _addThread: function(item){
         var store = this.stores.Thread;
+
         console.log(store.getValue(item, "message"))
     }
 });

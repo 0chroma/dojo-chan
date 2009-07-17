@@ -1,4 +1,4 @@
-{"id":"generated.js",
+{"id":"dojochan.js",
 "sources":[
 	{
 		"name":"BoardGroup",
@@ -7,7 +7,7 @@
 			"extends":{"$ref":"../Class/Object"},
 			"prototype":{
 				},
-			"instances":{"$ref":"../Class/BoardGroup"},
+			"instances":{"$ref":"../BoardGroup/"},
 			"description":"A group of boards",
 			"properties":{
 				"name":{
@@ -26,7 +26,7 @@
 			"extends":{"$ref":"../Class/Object"},
 			"prototype":{
 				},
-			"instances":{"$ref":"../Class/Board"},
+			"instances":{"$ref":"../Board/"},
 			"description":"A discussion board",
 			"properties":{
 				"title":{
@@ -50,7 +50,7 @@
 			"extends":{"$ref":"../Class/Object"},
 			"prototype":{
 				},
-			"instances":{"$ref":"../Class/Thread"},
+			"instances":{"$ref":"../Thread/"},
 			"description":"A discussion thread on a board",
 			"properties":{
 				"posts":{
@@ -73,26 +73,38 @@
 			"extends":{"$ref":"../Class/Object"},
 			"prototype":{
 				},
-			"instances":{"$ref":"../Class/Post"},
+			"instances":{"$ref":"../Post/"},
 			"description":"A post in a thread",
 			"properties":{
 				"name":{
-					"type":"string"
+					"type":"string",
+					"optional":true
 					},
 				"email":{
-					"type":"string"
+					"type":"string",
+					"optional":true
 					},
 				"tripcode":{
-					"type":"string"
+					"type":"string",
+					"optional":true
 					},
 				"nameblock":{
-					"type":"string"
+					"type":"string",
+					"optional":true
 					},
 				"subject":{
-					"type":"string"
+					"type":"string",
+					"optional":true
 					},
 				"message":{
 					"type":"string"
+					},
+				"file":{
+					"type":"object",
+					"optional":true
+					},
+				"thread":{
+					"type":"object"
 					}
 				}
 			}

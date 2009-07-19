@@ -5,6 +5,11 @@
 
 .chanPostImage {
     float: left;
+    max-height: 200px;
+}
+
+img:focus.chanPostImage {
+    max-height: none;
 }
 
 

@@ -65,3 +65,8 @@ html {
 #board.hidden, #index.hidden, #notfound.hidden {
     display: none;
 }
+
+hr {
+    clear: both;
+    margin: 2em 1em 1em 2em;
+}

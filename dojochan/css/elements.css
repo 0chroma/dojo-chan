@@ -1,0 +1,18 @@
+.chanPost {
+    clear: both;
+    margin: 1em;
+}
+
+.chanPostImage {
+    float: left;
+}
+
+
+.chanPostInfo {
+    float: left;
+    margin: 1em;
+}
+
+.chanPostBottom {
+    clear: both;
+}

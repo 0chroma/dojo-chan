@@ -3,6 +3,7 @@ dojo.require("dijit._Widget");
 dojo.require("dijit._Templated");
 dojo.require("dijit._Container");
 dojo.require("dojox.data.PersevereStore");
+dojo.require("chan.widget.Thread");
 
 dojo.declare("chan.widget.Board", [dijit._Widget, dijit._Templated, dijit._Container], {
     templatePath: dojo.moduleUrl("chan.widget.templates", "Board.html"),
@@ -40,7 +41,13 @@ dojo.declare("chan.widget.Board", [dijit._Widget, dijit._Templated, dijit._Conta
     },
     _addThread: function(item){
         var store = this.stores.Thread;
-        
-        console.log(item)
+        var thread = new chan.widget.Thread({
+            threadItem: item,
+            store: store,
+            postStore: this.stores.Post,
+            fileStore: this.stores.File
+        });
+        this.addChild(thread);
+        thread.startup();
     }
 });

@@ -1,10 +1,34 @@
 .chanPost {
-    clear: both;
     margin: 1em;
+}
+
+.chanPost.first {
+    clear: both;
+}
+
+.chanPostDoubledash {
+    float: left;
+}
+
+.chanPost.first .chanPostDoubledash {
+    display: none;
+}
+
+.chanPostBody {
+    float: left;
+    padding: 1em;
+    background: #d6daf0;
+}
+
+.chanPost.first .chanPostBody {
+    background: none;
+    width: 90%;
+    float: none;
 }
 
 .chanPostImage {
     float: left;
+    margin-right: 1em;
     max-height: 200px;
 }
 
@@ -12,12 +36,14 @@ img:focus.chanPostImage {
     max-height: none;
 }
 
-
 .chanPostInfo {
     float: left;
-    margin: 1em;
 }
 
 .chanPostBottom {
     clear: both;
+}
+
+.chanPost.first .chanPostBottom {
+    clear: none;
 }

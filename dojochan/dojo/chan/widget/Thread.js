@@ -11,13 +11,16 @@ dojo.declare("chan.widget.Thread", [dijit._Widget, dijit._Templated, dijit._Cont
     fileStore: null,
     postCreate: function(){
         var posts = this.store.getValues(this.threadItem, "posts");
-        dojo.forEach(posts, function(item){
+        dojo.forEach(posts, function(item, i){
             var post = new chan.widget.Post({
                 store: this.postStore,
                 fileStore: this.fileStore,
                 postItem: item
             });
             this.addChild(post);
+            if(i == 0){
+                dojo.addClass(post.domNode, "first");
+            }
             post.startup();
         }, this);
     }
@@ -40,6 +43,9 @@ dojo.declare("chan.widget.Post", [dijit._Widget, dijit._Templated, dijit._Contai
     injectImage: function(item){
         var store = this.store;
         var file = store.getValue(item, "file");
-        this.imageNode.src = "/File/"+this.fileStore.getValue(item, "id");
+        if(!file)
+            this.imageNode.parentNode.removeChild(this.imageNode);
+        else
+            this.imageNode.src = "/File/"+this.fileStore.getValue(item, "id");
     }
 });
